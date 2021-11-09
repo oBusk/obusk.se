@@ -7,6 +7,7 @@
         "plugin:prettier/recommended"
     ],
     "rules": {
+        "@next/next/google-font-display": 0,
         "import/order": [
             "error",
             {
