@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent } from "react";
 
 type Color = { name: string; colors: string[] };
 
@@ -18,15 +18,56 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const IndexPage: FunctionComponent<Props> = ({ gradients }) => {
-    useEffect(() => {
-        document.documentElement.style.background = `linear-gradient(to right, ${gradients[
-            Math.floor(Math.random() * gradients.length)
-        ].colors.join(", ")})`;
-    });
-
     return (
-        <main>
-            <h1>🤔 That domain isn&apos;t really setup or ready yet</h1>
+        <main
+            style={{
+                background: `linear-gradient(to right, ${gradients[
+                    Math.floor(Math.random() * gradients.length)
+                ].colors.join(", ")})`,
+            }}
+        >
+            <h1>Oscar Busk</h1>
+            <p>
+                Hello and welcome to my website!
+                <ul>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://npm-diff.app/"
+                        >
+                            npm-diff.app
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://mg.obusk.se/"
+                        >
+                            Management Game
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://rectangle.obusk.se/"
+                        >
+                            Rectangle That!
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
+                            href="https://nonogram.obusk.se/"
+                        >
+                            nonogram
+                        </a>
+                    </li>
+                </ul>
+            </p>
             <footer>
                 Oscar Busk - {new Date().getFullYear()} -{" "}
                 <a href="mailto:contact@obusk.se">contact@obusk.se</a>
