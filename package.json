@@ -1,0 +1,61 @@
+{
+    "name": "@obusk/obusk.se",
+    "private": true,
+    "version": "0.0.1",
+    "description": "🙋‍♂🔧 My simple website",
+    "keywords": [
+        "personal",
+        "vercel"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/oBusk/obusk.se.git"
+    },
+    "author": "Oscar Busk <oscar.busk@gmail.com>",
+    "license": "ISC",
+    "engines": {
+        "node": "14.x",
+        "npm": "8.x"
+    },
+    "volta": {
+        "node": "14.18.1",
+        "npm": "8.1.3"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npm run lint-staged"
+    },
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc",
+        "lint": "next lint --ignore-path .gitignore",
+        "postlint": "npm run prettier",
+        "lint-fix": "next lint --ignore-path .gitignore --fix",
+        "prettier": "prettier **/*.{md,yml,yaml,json} --ignore-path .gitignore --check",
+        "postlint-fix": "npm run prettier-fix",
+        "prettier-fix": "prettier **/*.{md,yml,yaml,json} --ignore-path .gitignore --write",
+        "lint-staged": "lint-staged"
+    },
+    "dependencies": {
+        "next": "^12.0.3",
+        "normalize.css": "^8.0.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.34",
+        "@types/react-dom": "^17.0.11",
+        "@typescript-eslint/eslint-plugin": "~5.3.1",
+        "@typescript-eslint/parser": "~5.3.1",
+        "eslint": "^7.32.0",
+        "eslint-config-next": "^12.0.3",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-prettier": "^4.0.0",
+        "lint-staged": "^11.2.6",
+        "prettier": "^2.4.1",
+        "simple-git-hooks": "^2.7.0",
+        "typescript": "4.4.4"
+    }
+}
