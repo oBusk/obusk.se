@@ -11,7 +11,7 @@ class MyDocument extends Document {
                     />
                     <meta
                         name="description"
-                        content="This is a placeholder for something built by oBusk"
+                        content="This is the personal website of Oscar Busk"
                     />
                 </Head>
                 <body>

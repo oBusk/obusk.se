@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useRef } from "react";
 
 type Color = { name: string; colors: string[] };
 
@@ -18,14 +18,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 const IndexPage: FunctionComponent<Props> = ({ gradients }) => {
+    const mainRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (mainRef.current) {
+            mainRef.current.style.background = `linear-gradient(to right, ${gradients[
+                Math.floor(Math.random() * gradients.length)
+            ].colors.join(", ")})`;
+        }
+    });
+
     return (
-        <main
-            style={{
-                background: `linear-gradient(to right, ${gradients[
-                    Math.floor(Math.random() * gradients.length)
-                ].colors.join(", ")})`,
-            }}
-        >
+        <main ref={mainRef} style={{ background: "#373737" }}>
             <h1>Oscar Busk</h1>
             <p>
                 Hello and welcome to my website!
