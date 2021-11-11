@@ -47,6 +47,15 @@ const IndexPage: FunctionComponent<Props> = ({ gradients }) => {
                         <a
                             target="_blank"
                             rel="noreferrer"
+                            href="https://npm-scanner.vercel.app/"
+                        >
+                            npm-scanner.vercel.app
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noreferrer"
                             href="https://mg.obusk.se/"
                         >
                             Management Game

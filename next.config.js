@@ -10,6 +10,12 @@ module.exports = {
                 basePath: false,
             },
             {
+                source: "/(npm-?scan)(ner)?",
+                destination: "https://npm-scanner.vercel.app",
+                permanent: false,
+                basePath: false,
+            },
+            {
                 source: "/(mg|management-?game)",
                 destination: "https://mg.obusk.se",
                 permanent: false,
