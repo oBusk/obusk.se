@@ -23,7 +23,9 @@ const IndexPage: FunctionComponent<Props> = ({}) => {
                     >
                         github.com/oBusk
                     </a>
-                    <h1>obusk.se</h1>
+                    <h1>
+                        <a href="https://obusk.se">obusk.se</a>
+                    </h1>
                     <a
                         href="https://npm-diff.app"
                         target="_blank"

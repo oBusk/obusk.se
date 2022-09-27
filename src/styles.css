@@ -36,6 +36,12 @@ footer {
     align-items: center;
 }
 
+@media (prefers-color-scheme: light) {
+    footer {
+        opacity: 0.4;
+    }
+}
+
 a,
 a:link,
 a:visited {
@@ -48,4 +54,9 @@ a:link {
 
 a:visited {
     color: var(--color-2);
+}
+
+h1 a:link,
+h1 a:visited {
+    color: currentColor;
 }
