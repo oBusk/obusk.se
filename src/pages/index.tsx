@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { FunctionComponent } from "react";
+import { NoSSrCommposition } from "^/components/Composition";
 
 type Props = {};
 
@@ -31,6 +32,7 @@ const IndexPage: FunctionComponent<Props> = ({}) => {
                         npm-diff.app
                     </a>
                 </header>
+                <NoSSrCommposition />
                 <footer>
                     <span>
                         Oscar Busk - {new Date().getFullYear()} -{" "}
