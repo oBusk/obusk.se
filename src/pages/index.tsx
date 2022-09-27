@@ -31,56 +31,54 @@ const IndexPage: FunctionComponent<Props> = ({ gradients }) => {
     return (
         <main ref={mainRef} style={{ background: "#373737" }}>
             <h1>Oscar Busk</h1>
-            <p>
-                Hello and welcome to my website!
-                <ul>
-                    <li>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://npm-diff.app/"
-                        >
-                            npm-diff.app
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://npm-scanner.vercel.app/"
-                        >
-                            npm-scanner.vercel.app
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://mg.obusk.se/"
-                        >
-                            Management Game
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://rectangle.obusk.se/"
-                        >
-                            Rectangle That!
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://nonogram.obusk.se/"
-                        >
-                            nonogram
-                        </a>
-                    </li>
-                </ul>
-            </p>
+            <p>Hello and welcome to my website!</p>
+            <ul>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://npm-diff.app/"
+                    >
+                        npm-diff.app
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://npm-scanner.vercel.app/"
+                    >
+                        npm-scanner.vercel.app
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://mg.obusk.se/"
+                    >
+                        Management Game
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://rectangle.obusk.se/"
+                    >
+                        Rectangle That!
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://nonogram.obusk.se/"
+                    >
+                        nonogram
+                    </a>
+                </li>
+            </ul>
             <footer>
                 Oscar Busk - {new Date().getFullYear()} -{" "}
                 <a href="mailto:contact@obusk.se">contact@obusk.se</a>
