@@ -1,5 +1,4 @@
 import { Canvas } from "@react-three/fiber";
-import dynamic from "next/dynamic";
 import { Text } from "./Text";
 
 export const Composition = () => {
@@ -13,7 +12,3 @@ export const Composition = () => {
         </div>
     );
 };
-
-export const NoSSrCommposition = dynamic(async () => Composition, {
-    ssr: false,
-});
