@@ -27,19 +27,23 @@ header {
     align-items: center;
 }
 
+@media (max-width: 450px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        order: -1;
+    }
+}
+
 footer {
     display: flex;
 
-    opacity: 0.1;
+    opacity: 0.4;
 
     justify-content: space-around;
     align-items: center;
-}
-
-@media (prefers-color-scheme: light) {
-    footer {
-        opacity: 0.4;
-    }
 }
 
 a,
