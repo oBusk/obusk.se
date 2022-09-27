@@ -12,6 +12,7 @@ main {
     box-sizing: border-box;
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 6vh;
 
     border: solid transparent 2vh;
