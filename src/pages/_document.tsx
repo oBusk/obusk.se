@@ -6,12 +6,8 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Kumar+One&amp;family=Abel&amp;display=block"
+                        href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
                         rel="stylesheet"
-                    />
-                    <meta
-                        name="description"
-                        content="This is the personal website of Oscar Busk"
                     />
                     <link
                         rel="apple-touch-icon"
@@ -31,6 +27,8 @@ class MyDocument extends Document {
                         href="/favicon-16x16.png"
                     />
                     <link rel="manifest" href="/site.webmanifest" />
+                    {/* Tell the browser we support color schemes https://web.dev/color-scheme/  */}
+                    <meta name="color-scheme" content="dark light" />
                 </Head>
                 <body>
                     <Main />
