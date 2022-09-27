@@ -32,7 +32,7 @@ const IndexPage: FunctionComponent<Props> = ({}) => {
                         npm-diff.app
                     </a>
                 </header>
-                <Composition />
+                {/* <Composition /> */}
                 <footer>
                     <span>
                         Oscar Busk - {new Date().getFullYear()} -{" "}
