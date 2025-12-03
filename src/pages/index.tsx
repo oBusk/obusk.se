@@ -40,8 +40,8 @@ const IndexPage: FunctionComponent<Props> = ({}) => {
                     <footer>
                         <span>
                             Oscar Busk - {new Date().getFullYear()} -{" "}
-                            <a href="mailto:contact@obusk.se">
-                                contact@obusk.se
+                            <a href="mailto:oscar.busk@gmail.com">
+                                oscar.busk@gmail.com
                             </a>
                         </span>
                     </footer>
