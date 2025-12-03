@@ -14,15 +14,18 @@
     "author": "Oscar Busk <oscar.busk@gmail.com>",
     "license": "ISC",
     "engines": {
-        "node": "16.x",
-        "npm": "8.x"
+        "node": "24.x"
     },
-    "volta": {
-        "node": "16.17.1",
-        "npm": "8.19.2"
+    "devEngines": {
+        "runtime": {
+            "name": "node",
+            "version": "^24.11.1",
+            "onFail": "download"
+        }
     },
+    "packageManager": "pnpm@10.24.0",
     "simple-git-hooks": {
-        "pre-commit": "npm run lint-staged"
+        "pre-commit": "pnpm run lint-staged"
     },
     "scripts": {
         "dev": "next",
@@ -30,10 +33,10 @@
         "start": "next start",
         "type-check": "tsc",
         "lint": "next lint --ignore-path .gitignore",
-        "postlint": "npm run prettier",
+        "postlint": "pnpm run prettier",
         "lint-fix": "next lint --ignore-path .gitignore --fix",
         "prettier": "prettier **/*.{md,yml,yaml,json} --ignore-path .gitignore --check",
-        "postlint-fix": "npm run prettier-fix",
+        "postlint-fix": "pnpm run prettier-fix",
         "prettier-fix": "prettier **/*.{md,yml,yaml,json} --ignore-path .gitignore --write",
         "lint-staged": "lint-staged"
     },

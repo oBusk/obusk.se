@@ -11,28 +11,11 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
-            - name: Use volta versioning
-              uses: volta-cli/action@v1
-            - name: Get cache dir, Node Version and NPM Version
-              id: node-config
-              run: |
-                  echo "::set-output name=nodev::$(node -v)"
-                  echo "::set-output name=npmv::$(npm -v)"
-                  echo "::set-output name=dir::$(npm config get cache)"
-            - name: Cache npm cache
-              uses: actions/cache@v3
-              with:
-                  path: ${{ steps.node-config.outputs.dir }}
-                  key: ${{ runner.os }}-node_{{ steps.node-config.outputs.nodev }}-npm_${{ steps.node-config.outputs.npmv }}-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node_${{ steps.node-config.outputs.nodev }}-npm$_{{ steps.node-config.outputs.npmv }}
-                      ${{ runner.os }}-node_${{ steps.node-config.outputs.nodev }}
-                      ${{ runner.os }}
-            - name: Install
-              run: npm ci
+              uses: actions/checkout@v6
+            - name: Set up using pnpm
+              uses: oBusk/action-pnpm-setup@v1
             - name: Check Linting
-              run: npm run lint
+              run: pnpm run lint
 
     build:
         runs-on: ubuntu-latest
@@ -42,37 +25,11 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
-            - name: Use volta versioning
-              uses: volta-cli/action@v1
-            - name: Get cache dir, Node Version and NPM Version
-              id: node-config
-              run: |
-                  echo "::set-output name=nodev::$(node -v)"
-                  echo "::set-output name=npmv::$(npm -v)"
-                  echo "::set-output name=dir::$(npm config get cache)"
-            - name: Cache npm cache
-              uses: actions/cache@v3
-              with:
-                  path: ${{ steps.node-config.outputs.dir }}
-                  key: ${{ runner.os }}-node_{{ steps.node-config.outputs.nodev }}-npm_${{ steps.node-config.outputs.npmv }}-${{ hashFiles('**/package-lock.json') }}
-                  restore-keys: |
-                      ${{ runner.os }}-node_${{ steps.node-config.outputs.nodev }}-npm$_{{ steps.node-config.outputs.npmv }}
-                      ${{ runner.os }}-node_${{ steps.node-config.outputs.nodev }}
-                      ${{ runner.os }}
-            - name: Cache next.js build cache
-              uses: actions/cache@v3
-              with:
-                  path: ${{ github.workspace }}/.next/cache
-                  # Generate a new cache whenever packages or source files change.
-                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]sx?') }}
-                  # If source files changed but packages didn't, rebuild from a prior cache.
-                  restore-keys: |
-                      ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
-            - name: Install
-              run: npm ci
-            - name: Build
-              run: npm run build
+              uses: actions/checkout@v6
+            - name: Set up using pnpm
+              uses: oBusk/action-pnpm-setup@v1
+            - name: Build Project
+              run: pnpm run build
             - name: Check for uncommitted changes
               id: check-changes
               uses: mskri/check-uncommitted-changes-action@v1.0.1
