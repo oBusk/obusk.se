@@ -1,12 +1,16 @@
 configDependencies:
-    "@obusk/pnpm-plugin-defaults": 0.1.0+sha512-vsCchpE+K6g67YdDYYBCVQQFpfVFuVV423CCBbUEBm7FmWg/MI0Keuhkb6bjWpWaITE1PMSmcsrXbHv9FPFloA==
+  '@obusk/pnpm-plugin-defaults': 0.1.0+sha512-vsCchpE+K6g67YdDYYBCVQQFpfVFuVV423CCBbUEBm7FmWg/MI0Keuhkb6bjWpWaITE1PMSmcsrXbHv9FPFloA==
 
 onlyBuiltDependencies:
-    - simple-git-hooks
-    - unrs-resolver
+  - simple-git-hooks
+  - unrs-resolver
+
+overrides:
+  glob@>=10.2.0 <10.5.0: '>=10.5.0'
+  micromatch@<4.0.8: '>=4.0.8'
 
 trustPolicyExclude:
-    - eslint-config-prettier@8.10.2
-    - eslint-import-resolver-typescript@3.10.1
-    - eslint-plugin-prettier@4.2.5
-    - semver@6.3.1
+  - eslint-config-prettier@8.10.2
+  - eslint-import-resolver-typescript@3.10.1
+  - eslint-plugin-prettier@4.2.5
+  - semver@6.3.1
