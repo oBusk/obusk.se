@@ -24,6 +24,14 @@
         }
     },
     "packageManager": "pnpm@10.24.0",
+    "lint-staged": {
+        "**/*.{ts,tsx,js,jsx}": [
+            "eslint --fix"
+        ],
+        "**/*.{md,yml,yaml,json}": [
+            "prettier  --ignore-path .prettierignore --write"
+        ]
+    },
     "simple-git-hooks": {
         "pre-commit": "pnpm run lint-staged"
     },
