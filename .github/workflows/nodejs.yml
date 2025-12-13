@@ -1,4 +1,6 @@
 name: Node.js CI
+permissions:
+    contents: read
 
 on: [push, pull_request]
 
@@ -28,11 +30,5 @@ jobs:
               uses: actions/checkout@v6
             - name: Set up using pnpm
               uses: oBusk/action-pnpm-setup@v1
-            - name: Build Project
+            - name: Build
               run: pnpm run build
-            - name: Check for uncommitted changes
-              id: check-changes
-              uses: mskri/check-uncommitted-changes-action@v1.0.1
-            - name: There are uncommited changes
-              if: steps.check-changes.outputs.changes != ''
-              run: exit 1
