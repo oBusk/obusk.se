@@ -19,11 +19,11 @@
     "devEngines": {
         "runtime": {
             "name": "node",
-            "version": "^24.11.1",
+            "version": "^24.13.0",
             "onFail": "download"
         }
     },
-    "packageManager": "pnpm@10.24.0",
+    "packageManager": "pnpm@10.28.2",
     "lint-staged": {
         "**/*.{ts,tsx,js,jsx}": [
             "eslint --fix"
@@ -40,35 +40,30 @@
         "build": "next build",
         "start": "next start",
         "type-check": "tsc",
-        "lint": "next lint --ignore-path .gitignore",
+        "lint": "eslint .",
         "postlint": "pnpm run prettier",
-        "lint-fix": "next lint --ignore-path .gitignore --fix",
+        "lint-fix": "eslint --fix .",
         "prettier": "prettier '**/*.{md,yml,yaml,json}' --ignore-path .gitignore --ignore-path .prettierignore --check",
         "postlint-fix": "pnpm run prettier-fix",
         "prettier-fix": "prettier '**/*.{md,yml,yaml,json}' --ignore-path .gitignore --ignore-path .prettierignore --write",
         "lint-staged": "lint-staged"
     },
     "dependencies": {
-        "next": "^14.2.35",
+        "next": "16.1.6",
         "normalize.css": "^8.0.1",
-        "react": "^18.3.1",
+        "react": "19.2.4",
         "react-div-100vh": "^0.7.0",
-        "react-dom": "^18.3.1"
+        "react-dom": "19.2.4"
     },
     "devDependencies": {
-        "@types/node": "^18.19.130",
-        "@types/react": "^18.3.27",
-        "@types/react-dom": "^18.3.7",
-        "@typescript-eslint/eslint-plugin": "~5.38.1",
-        "@typescript-eslint/parser": "~5.38.1",
-        "eslint": "^8.57.1",
-        "eslint-config-next": "^14.2.33",
-        "eslint-config-prettier": "^8.10.2",
-        "eslint-plugin-import": "^2.32.0",
-        "eslint-plugin-prettier": "^5.5.4",
-        "lint-staged": "^13.3.0",
-        "prettier": "~3.0.0",
+        "@obusk/eslint-config-next": "^16.1.1",
+        "@types/node": "24.10.2",
+        "@types/react": "19.2.10",
+        "@types/react-dom": "19.2.3",
+        "eslint": "^9.39.2",
+        "lint-staged": "^16.2.7",
+        "prettier": "~3.8.1",
         "simple-git-hooks": "^2.13.1",
-        "typescript": "4.8.4"
+        "typescript": "5.9.3"
     }
 }

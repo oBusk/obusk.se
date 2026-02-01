@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { FunctionComponent } from "react";
+import { type FunctionComponent } from "react";
 import Div100vh from "react-div-100vh";
 
 type Props = {};
