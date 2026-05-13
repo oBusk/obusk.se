@@ -19,11 +19,11 @@
     "devEngines": {
         "runtime": {
             "name": "node",
-            "version": "^24.14.1",
+            "version": "^24.15.0",
             "onFail": "download"
         }
     },
-    "packageManager": "pnpm@10.33.0",
+    "packageManager": "pnpm@11.1.1",
     "lint-staged": {
         "**/*.{ts,tsx,js,jsx}": [
             "eslint --fix"
