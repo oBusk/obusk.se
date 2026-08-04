@@ -19,11 +19,11 @@
     "devEngines": {
         "runtime": {
             "name": "node",
-            "version": "^24.15.0",
+            "version": "^24.19.0",
             "onFail": "download"
         }
     },
-    "packageManager": "pnpm@11.1.1",
+    "packageManager": "pnpm@11.18.0",
     "lint-staged": {
         "**/*.{ts,tsx,js,jsx}": [
             "eslint --fix"
@@ -49,21 +49,21 @@
         "lint-staged": "lint-staged"
     },
     "dependencies": {
-        "next": "16.2.6",
+        "next": "16.3.0",
         "normalize.css": "^8.0.1",
-        "react": "19.2.5",
+        "react": "19.2.8",
         "react-div-100vh": "^0.7.0",
-        "react-dom": "19.2.5"
+        "react-dom": "19.2.8"
     },
     "devDependencies": {
-        "@obusk/eslint-config-next": "^16.1.2",
+        "@obusk/eslint-config-next": "^16.3.0",
         "@types/node": "24.10.2",
-        "@types/react": "19.2.14",
-        "@types/react-dom": "19.2.3",
-        "eslint": "^9.39.2",
-        "lint-staged": "^16.4.0",
-        "prettier": "~3.8.1",
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.4",
+        "eslint": "^10.8.0",
+        "lint-staged": "^17.3.0",
+        "prettier": "~3.9.6",
         "simple-git-hooks": "^2.13.1",
-        "typescript": "5.9.3"
+        "typescript": "~6.0.3"
     }
 }
