@@ -1,5 +1,5 @@
 configDependencies:
-    "@obusk/pnpm-plugin-defaults": 0.6.4
+    "@obusk/pnpm-plugin-defaults": latest
 
 minimumReleaseAgeExclude:
     - next
@@ -8,15 +8,14 @@ minimumReleaseAgeExclude:
     - "@obusk/eslint-config-next"
 
 allowBuilds:
+    "@parcel/watcher": true
     sharp: true
-    simple-git-hooks@2.13.1: true
+    simple-git-hooks@2.14.0: true
     unrs-resolver: true
 
 overrides:
-    "@types/react": 19.2.18
-    "@types/react-dom": 19.2.4
-    postcss@<8.5.10: ^8.5.10
+    "@types/react": 19.3.0
+    "@types/react-dom": 19.3.0
 
 trustPolicyExclude:
-    - eslint-import-resolver-typescript@3.10.1
     - semver@6.3.1
