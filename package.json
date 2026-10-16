@@ -50,7 +50,7 @@
         "lint-staged": "lint-staged"
     },
     "dependencies": {
-        "next": "16.3.7",
+        "next": "16.3.8",
         "normalize.css": "^8.0.1",
         "react": "19.3.0",
         "react-div-100vh": "^0.7.0",
