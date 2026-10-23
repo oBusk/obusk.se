@@ -19,7 +19,7 @@
     "devEngines": {
         "runtime": {
             "name": "node",
-            "version": "^24.19.0",
+            "version": "^24.22.1",
             "onFail": "download"
         }
     },
@@ -50,20 +50,20 @@
         "lint-staged": "lint-staged"
     },
     "dependencies": {
-        "next": "16.3.7",
+        "next": "16.4.2",
         "normalize.css": "^8.0.1",
-        "react": "19.3.0",
+        "react": "19.3.1",
         "react-div-100vh": "^0.7.0",
-        "react-dom": "19.3.0"
+        "react-dom": "19.3.1"
     },
     "devDependencies": {
-        "@obusk/eslint-config-next": "^16.3.4",
+        "@obusk/eslint-config-next": "^16.4.0",
         "@types/node": "24.10.2",
         "@types/react": "19.3.0",
         "@types/react-dom": "19.3.0",
-        "eslint": "^10.11.0",
+        "eslint": "^10.13.0",
         "lint-staged": "^17.6.0",
-        "prettier": "~3.9.9",
+        "prettier": "~3.9.10",
         "simple-git-hooks": "^2.14.0",
         "typescript": "~6.0.3"
     }
